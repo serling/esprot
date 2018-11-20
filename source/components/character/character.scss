@@ -6,29 +6,49 @@
 
     &:focus {
       + #{ $self }__label {
+        outline: 1px solid black;
       }
     }
 
     &:checked {
-      + #{ $self }__label {
-        background-color: green;
+      + #{ $self }__label #{ $self }__portrait::before {
+        display: none;
       }
+    }
+  }
+
+  &__portrait {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("/source/assets/icons/close.svg");
+      opacity: 0.8;
+      background-repeat: no-repeat;
+      background-size: contain;
     }
   }
 
   &__label {
     display: inline-block;
-    padding: 1rem 2rem;
     text-align: center;
     cursor: pointer;
 
-    &--checked {
-    }
-
     &:hover,
     &:focus {
-      #{ $self }__portrait {
-        background-color: red;
+      #{ $self }__portrait::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(white, 0.2);
       }
     }
   }

@@ -62,25 +62,25 @@
         "characters": [
           {
             "id": "#level-1",
-            "name": "Level 1",
+            "name": "Number 1",
             "isSelected": true,
             "src": "/source/assets/images/level.jpg"
           },
           {
             "id": "#level-2",
-            "name": "Level 2",
+            "name": "Number 2",
             "isSelected": false,
             "src": "/source/assets/images/level.jpg"
           },
           {
             "id": "#level-3",
-            "name": "Level 3",
+            "name": "Number 3",
             "isSelected": false,
             "src": "/source/assets/images/level.jpg"
           },
           {
             "id": "#level-4",
-            "name": "Level 4",
+            "name": "Number 4",
             "isSelected": true,
             "src": "/source/assets/images/level.jpg"
           }
