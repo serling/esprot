@@ -6,7 +6,7 @@
 
     &:focus {
       + #{ $self }__label {
-        outline: 1px solid black;
+        // outline: 1px solid black;
       }
     }
 
@@ -39,8 +39,7 @@
     text-align: center;
     cursor: pointer;
 
-    &:hover,
-    &:focus {
+    &:hover {
       #{ $self }__portrait::after {
         content: "";
         position: absolute;
