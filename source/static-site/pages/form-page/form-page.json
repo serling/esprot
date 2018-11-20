@@ -1,0 +1,26 @@
+{
+  "title": "Landing Page",
+  "form": {
+    "formId": "new-form-0",
+    "endpoint": "/static/api/on-form-submit",
+    "title": {
+      "id": "34r34r34r",
+      "textInput": {
+        "id": "4345345345345",
+        "label": "it's a label too!",
+        "placeholder": "it's a placehodler"
+      }
+    },
+    "description": {
+      "id": "m04ij3489j34",
+      "textInput": {
+        "id": "2893h23",
+        "label": "it's a label!",
+        "placeholder": "it's a proper placeholder"
+      },
+      "data": {
+        "text": "data from api/properties"
+      }
+    }
+  }
+}

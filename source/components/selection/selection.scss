@@ -1,0 +1,10 @@
+.selection {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    flex: 1 0 10%;
+  }
+}

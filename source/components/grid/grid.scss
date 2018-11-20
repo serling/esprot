@@ -1,0 +1,28 @@
+.grid {
+  $self: &;
+  $negative-margin: -$gutter;
+
+  @include remove-list-styles;
+  padding: $gutter;
+
+  @mixin enable-grid($at) {
+    @media screen and (min-width: $at) {
+      display: flex;
+      flex-wrap: wrap;
+      margin-left: $negative-margin;
+    }
+  }
+
+  &__item {
+    padding: $gutter 0;
+    width: 100%;
+  }
+
+  &--default {
+    @include enable-grid($break-at-lg);
+
+    #{$self}__item {
+      flex: 0 0 25%;
+    }
+  }
+}

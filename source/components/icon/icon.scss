@@ -1,0 +1,11 @@
+.icon {
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  @each $name, $value in $icons {
+    &--#{$name} {
+      background-image: url($value);
+    }
+  }
+}

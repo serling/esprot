@@ -1,0 +1,51 @@
+.text-input {
+  &--required {
+    .text-input__heading {
+      position: relative;
+
+      &::after {
+        content: "*";
+        position: absolute;
+        display: inline-block;
+        top: 0;
+        right: -1rem;
+      }
+    }
+  }
+
+  &__label {
+    display: block;
+    margin-bottom: 1rem;
+  }
+
+  &__heading {
+    display: inline-block;
+  }
+
+  &__description {
+    margin-top: 1rem;
+    font-size: 1rem;
+  }
+
+  &__input {
+    @include remove-input-styles;
+    padding: 1rem;
+    width: 100%;
+    border-bottom: 4px solid transparent;
+
+    &:focus:required:invalid,
+    &--invalid {
+      border-bottom-color: $color--black;
+    }
+
+    &:focus,
+    &:active {
+      border-bottom-color: $color--black;
+    }
+
+    &--default {
+      background-color: $background-color;
+      border-bottom-color: transparent;
+    }
+  }
+}

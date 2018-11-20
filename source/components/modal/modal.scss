@@ -1,0 +1,67 @@
+.modal {
+  $self: &;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(100%);
+  transition: opacity 0.5s, transform 0s 0.5s, visibility 0s 0.5s;
+  z-index: 9001;
+
+  &--unclosable {
+    z-index: 9002;
+  }
+
+  &--is-visible {
+    transition-delay: 0s;
+    transform: none;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &--fits-on-screen {
+    display: flex;
+    align-items: center;
+  }
+
+  &__background {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba($background-color, 0.75);
+
+    // &--opaque {
+    //   background-color: $background-color;
+    // }
+  }
+
+  &__content {
+    width: 95%;
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
+    background-color: $color--white;
+    overflow: hidden;
+    transform: scale(0.9);
+    will-change: transform;
+    transition: transform 0.5s cubic-bezier(0.3, 0.75, 0.3, 1);
+    overflow: hidden;
+
+    #{$self}--is-visible & {
+      transform: none;
+    }
+  }
+
+  &__close {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}

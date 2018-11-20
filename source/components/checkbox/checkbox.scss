@@ -1,0 +1,36 @@
+.checkbox {
+  $self: &;
+
+  &__input {
+    @include visually-hidden;
+
+    &:focus {
+      + #{ $self }__label {
+        background-color: lightgray;
+      }
+    }
+
+    &:checked {
+      + #{ $self }__label {
+        border-color: purple;
+      }
+    }
+  }
+
+  &__label {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: lightgray;
+    border: 4px solid $color--black;
+    cursor: pointer;
+
+    &--checked {
+      border-color: green;
+    }
+
+    &:hover,
+    &:focus {
+      border-color: lightgray;
+    }
+  }
+}

@@ -1,0 +1,5 @@
+.DS_Store
+dist
+node_modules
+source/static-site/pages/pages.js
+source/static-site/pages/paths.js

@@ -1,0 +1,35 @@
+.character {
+  $self: &;
+
+  &__input {
+    @include visually-hidden;
+
+    &:focus {
+      + #{ $self }__label {
+      }
+    }
+
+    &:checked {
+      + #{ $self }__label {
+        background-color: green;
+      }
+    }
+  }
+
+  &__label {
+    display: inline-block;
+    padding: 1rem 2rem;
+    text-align: center;
+    cursor: pointer;
+
+    &--checked {
+    }
+
+    &:hover,
+    &:focus {
+      #{ $self }__portrait {
+        background-color: red;
+      }
+    }
+  }
+}

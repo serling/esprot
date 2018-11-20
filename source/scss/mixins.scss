@@ -1,0 +1,52 @@
+@mixin remove-list-styles {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+@mixin remove-link-styles {
+  text-decoration: none;
+  color: inherit;
+}
+
+@mixin remove-button-styles {
+  appearance: none;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+}
+
+@mixin remove-input-styles {
+  margin: 0;
+  border: 0;
+  outline: 0;
+  padding: 0;
+  -webkit-appearance: none;
+
+  &::-webkit-search-decoration,
+  &::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+  }
+}
+
+@mixin visually-hidden {
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: -999em;
+  overflow: hidden;
+}
+
+@mixin icon($name, $width, $height) {
+  &::after {
+    background: transparent url(map-get($icons, $name)) no-repeat scroll right
+      50%;
+    background-size: contain;
+    content: " ";
+    display: inline-block;
+    height: $height;
+    width: $width;
+    margin-left: 0.2em;
+  }
+}

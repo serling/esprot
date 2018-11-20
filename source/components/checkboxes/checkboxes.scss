@@ -1,0 +1,19 @@
+.checkboxes {
+  margin: 2rem 0;
+
+  &__list {
+    @include remove-list-styles;
+    display: flex;
+  }
+
+  &__heading {
+  }
+
+  &__item {
+    margin-left: $gutter;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}

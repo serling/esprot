@@ -1,0 +1,28 @@
+.xhtml-content {
+  > * {
+    margin: 1rem 0 0 0;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  ul,
+  li {
+    @include remove-list-styles;
+  }
+
+  h2,
+  h3,
+  h4 {
+  }
+
+  a {
+    @include remove-link-styles;
+    color: $color--black;
+
+    &[href*='//'] {
+      //external link styling
+    }
+  }
+}
